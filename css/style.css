@@ -45,3 +45,11 @@
   border-radius: 5rem;
   background-color: white;
 }
+
+.valori {
+  border: 1px solid rgb(30, 138, 232);
+  border-radius: 5rem;
+  padding: 1rem;
+  color: red;
+  box-shadow: 2px 3px 3px rgb(100, 100, 100);
+}

@@ -75,6 +75,7 @@ $result_select = $conn->query($sql_select);
             <div class="text-center">
                 <button class="mt-5 px-5 fs-3 py-2 zoom3 btn btn-primary" type="submit" name="submit">MODIFICA LIBRO</button>
             </div>
+
         </form>
 
     </div>

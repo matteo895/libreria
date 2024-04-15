@@ -8,13 +8,29 @@ $result = $conn->query($query_libri);
 
 // Verifica se ci sono risultati
 if ($result->num_rows > 0) {
-    echo "<h1>Elenco dei libri disponibili</h1>";
-    echo "<ul>";
+    echo "<h1 class = 'text-center mt-5 mb-5 fs-1'>ELENCO DEI LIBRI DISPONIBILI</h1>";
+    echo "<ul class= 'nav-link'>";
     while ($row = $result->fetch_assoc()) {
-        echo "<li>{$row['id']} - {$row['titolo']} - {$row['autore']} - {$row['anno']} - {$row['genere']} ";
-        echo "<a href='modifica_libro.php?id={$row['id']}'>Modifica</a> - ";
-        echo "<a href='rimuovi_libro.php?id={$row['id']}'>Rimuovi</a> - ";
-        echo "<a href='aggiungi_libro.php?id={$row['id']}'>Aggiungi</a></li>";
+        echo "<li class = 'text-center'>
+        <div class = 'container'>
+        <h2 class = 'fs-1 mb-4 py-3 border border-primary' >N LIBRO : {$row['id']} </h2>
+        <h2 class = 'fs-1 mb-4 mt-3 py-3 border border-primary'>TITOLO : {$row['titolo']}</h2>
+        <h2 class = 'fs-1 mb-4 py-3 border border-primary'>AUTORE : {$row['autore']} </h2> 
+        <h2 class= 'fs-1 mb-4 py-3 border border-primary'>ANNO :  {$row['anno']} </h2>
+        <h2 class = 'fs-1 mb-4 py-3 border border-primary'> GENERE : {$row['genere']} </h2>";
+        echo "<div class ='d-flex justify-content-center mt-5'>
+        <button class=' mt-5 mx-5 px-4 fs-5 py-2 zoom3 btn btn-primary' type='submit' name='submit'>
+          <a href='modifica_libro.php?id={$row['id']}' class='nav-link  fs-4'>MODIFICA</a> 
+        </button>";
+        echo
+        "<button class=' mt-5 mx-5 px-4 fs-5 py-2 zoom3 btn btn-primary' type='submit' name='submit'>
+          <a href='rimuovi_libro.php?id={$row['id']}'  class='nav-link  fs-4'>RIMUOVI</a> 
+        </button>";
+        echo
+        "<button class=' mt-5 mx-5 px-4 fs-5 py-2 zoom3 btn btn-primary ' type='submit' name='submit'>
+        <a href='aggiungi_libro.php?id={$row['id']}'  class='nav-link fs-4'>AGGIUNGI</a>
+        </button>
+        </div></li></div>";
     }
     echo "</ul>";
 } else {
@@ -36,12 +52,8 @@ $conn->close();
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body>
-    <div class="container">
-        <button class=" mt-5 px-5 fs-5 py-2 zoom3 btn btn-primary" type="submit" name="submit">
-            <a href="./aggiungi_libro.php" class="nav-link">TORNA ALL'AGGIUNTA LIBRI</a>
-        </button>
-    </div>
+<body class="bg-dark text-white">
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 
