@@ -1,0 +1,47 @@
+.zoom:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+  border-radius: 5rem;
+  box-shadow: 2px 3px 3px 4px rgb(100, 100, 100);
+}
+
+.zoom2 {
+  border-radius: 0.5rem;
+  background-color: rgb(63, 66, 245);
+}
+
+.zoom2:hover {
+  background-color: white;
+  border-radius: 5rem;
+}
+
+.zoom3:hover {
+  border-radius: 5rem;
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.zoom3 {
+  border-radius: 0.5rem;
+}
+
+.zoom4:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+  box-shadow: 3px 5px 5px 8px rgb(100, 100, 100);
+}
+
+.zoom4 {
+  border-radius: 5rem;
+}
+
+.zoom5 {
+  border-radius: 0.5rem;
+  background-color: rgb(63, 66, 245);
+}
+
+.zoom5:hover {
+  box-shadow: 2px 3px 3px rgb(100, 100, 100);
+  border-radius: 5rem;
+  background-color: white;
+}
